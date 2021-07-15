@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Single from "./components/layout/Single";
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+
+      <Single />
     </div>
   );
-}
+};
+
+const GlobalStyle = createGlobalStyle`
+  ${normalize}
+
+  body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  }
+`;
 
 export default App;
