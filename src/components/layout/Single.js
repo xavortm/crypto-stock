@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Graph from "../graph/Graph";
+import CurrencyView from "../currency-view/CurrencyView";
 
 const Single = () => {
   return (
     <StyledSingle>
       <ColumnAside>CryptoStock</ColumnAside>
       <ColumnMain>
-        <Graph id="bitcoin" />
+        <CurrencyView id="bitcoin" />
       </ColumnMain>
       <ColumnAside></ColumnAside>
     </StyledSingle>
